@@ -1,18 +1,24 @@
 import { HeaderDiv } from './styles';
+import { House, UserPlus, FolderOpen} from 'phosphor-react'
+import { defaultTheme } from '../../styles/themes/default';
+import { NavLink, Outlet } from 'react-router-dom';
 
 export default function Header() {
     return (
-        <HeaderDiv>
-            <div>
+        <>
+            <HeaderDiv>
                 <div>
-                    <img src='https://github.com/klaercio.png'></img>
+                    <div>
+                        <h1>Logo</h1>
+                    </div>
+                    <nav>
+                        <NavLink to='/' title='Home'><House/>Home</NavLink>
+                        <NavLink to='/AboutMe' title='AboutMe'><UserPlus/>About Me</NavLink>
+                        <NavLink to='/Projects'><FolderOpen/>Projects</NavLink>
+                    </nav>
                 </div>
-                <div>
-                    <a href="#">Home</a>
-                    <a href="#">About Me</a>
-                    <a href="#">Projects</a>
-                </div>
-            </div>
-        </HeaderDiv>
+            </HeaderDiv>
+            <Outlet/>
+        </>
     );
 }

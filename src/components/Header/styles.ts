@@ -11,16 +11,21 @@ export const HeaderDiv = styled.div`
         display: flex;
         margin: 0 auto;
         justify-content: space-between;
-      
         height: 100%;
+        align-items: flex-start;
 
-        div:nth-child(1) {
-            width: 8rem;
-            border-radius: 50px;
-            overflow: hidden;
+        div {
+         /*    display: block;
+            width: 100px; */
+
+            h1 {
+                position: relative;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
         }
         
-        div:nth-child(2) {
+        nav {
             display: flex;
             align-items: center;
             height: 100%;
@@ -33,9 +38,22 @@ export const HeaderDiv = styled.div`
                 color: ${props => props.theme.cyan};
                 font-weight: bold;
                 padding-right: 1rem;
+                line-height: 1.6;
+                display: flex;
+                gap: 3px;
+                align-items: center;
+                white-space: nowrap;
+                font-size: 20px;
+                transition: all 0.5s;
+                border-top: 2px solid transparent;
+                border-bottom: 2px solid transparent;
                 
                 &:hover {
                     filter: brightness(150%);
+                }
+
+                &.active {
+                    border-bottom: 2px solid ${props => props.theme.cyan};
                 }
             }
         }

@@ -1,7 +1,14 @@
-import Header from "../../components/Header/index";
+import { HomeDiv } from "./styles";
 
 export default function Home() { 
+
+    {console.log('fui chamado')}
     return (
-        <Header/>
+        <HomeDiv>
+            
+        </HomeDiv>
     );
+    
+ 
+ 
 }

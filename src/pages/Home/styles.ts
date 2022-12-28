@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const HomeDiv = styled.div`
-<<<<<<< HEAD
     display: grid;
     width: 80rem;
     max-width: 1200px;
@@ -89,6 +88,7 @@ export const Perfil = styled.div`
         color: ${props => props.theme.cyan};
         padding-top: 1rem;
         font-weight: bold;
+        cursor: pointer;
 
         svg {
             font-size: 2rem;
@@ -110,7 +110,3 @@ export const Perfil = styled.div`
         }
     }
 `
-=======
-    color: red;
-`;
->>>>>>> ba3fdbf07a88ab8317ec278a038a745061bf76da
